@@ -9,9 +9,9 @@ import reactor.core.publisher.Flux
 import reactor.core.publisher.Sinks
 
 @KafkaListener(uniqueGroupId = true, offsetReset = OffsetReset.LATEST)
-class KafkaTradeEventsRepository(
+class KafkaTradeEventsRepository : TradeEventsRepository {
   private val sink: Sinks.Many<TradeEvent> = Sinks.many().multicast().directBestEffort()
-) : TradeEventsRepository {
+
   companion object {
     private val log = LoggerFactory.getLogger(KafkaTradeEventsRepository::class.java)
   }

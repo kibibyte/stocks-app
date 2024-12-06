@@ -1,4 +1,6 @@
-# Stock app application (Kotlin, Reactor, Kafka, Server side events, Micronaut)
+# Stocks app (Kotlin, Reactor, Kafka, Server side events, Micronaut)
+
+Trade events (SSE) Hot Publisher POC
 
 ## Modules
 
@@ -24,7 +26,7 @@ $ ./gradlew test
 $ docker compose up
 ```
 
-Example request (Test trade events producer is enabled):
+Example request (Test trade events kafka producer is enabled):
 
 ```shell script
 curl --request GET \

@@ -1,8 +1,8 @@
-package com.myapp.usecase.trades.tools
+package com.myapp.usecase.trade.events.tools
 
-import com.myapp.usecase.trades.StockTape
-import com.myapp.usecase.trades.StockTicker
-import com.myapp.usecase.trades.events.TradeEventEntity
+import com.myapp.usecase.trade.StockTape
+import com.myapp.usecase.trade.StockTicker
+import com.myapp.usecase.trade.events.TradeEventEntity
 import io.micronaut.configuration.kafka.annotation.KafkaClient
 import io.micronaut.configuration.kafka.annotation.Topic
 import io.micronaut.context.annotation.Requires

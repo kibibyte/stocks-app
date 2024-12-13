@@ -1,4 +1,4 @@
-package com.myapp.usecase.trades;
+package com.myapp.usecase.trade;
 
 enum class StockTicker(val value: String) {
   TSLA("TSLA"),

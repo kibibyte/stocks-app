@@ -1,7 +1,7 @@
 package com.myapp.usecase.trades
 
-import com.myapp.usecase.trades.events.TradeEventData
-import com.myapp.usecase.trades.events.TradeEventEntity
+import com.myapp.usecase.trade.events.TradeEventData
+import com.myapp.usecase.trade.events.TradeEventEntity
 import io.micronaut.context.ApplicationContext
 import io.micronaut.http.client.sse.SseClient
 import io.micronaut.runtime.server.EmbeddedServer
@@ -12,12 +12,12 @@ import org.testcontainers.junit.jupiter.Testcontainers
 import org.testcontainers.utility.DockerImageName
 import reactor.core.publisher.Flux
 
-import static com.myapp.usecase.trades.StockTape.AMEX
-import static com.myapp.usecase.trades.StockTape.NASDAQ
-import static com.myapp.usecase.trades.StockTicker.*
+import static com.myapp.usecase.trade.StockTape.AMEX
+import static com.myapp.usecase.trade.StockTape.NASDAQ
+import static com.myapp.usecase.trade.StockTicker.*
 
 @Testcontainers(disabledWithoutDocker = true)
-class FindTradesQueryControllerTest {
+class StreamTradeEventsControllerTest {
 
   @Container
   static final KafkaContainer kafka = new KafkaContainer(

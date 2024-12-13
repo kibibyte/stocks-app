@@ -1,6 +1,6 @@
-package com.myapp.usecase.trades.events;
+package com.myapp.usecase.trade.events;
 
-import com.myapp.usecase.trades.StockTicker
+import com.myapp.usecase.trade.StockTicker
 import jakarta.inject.Singleton
 import org.slf4j.LoggerFactory
 import reactor.core.publisher.Flux
@@ -11,12 +11,12 @@ class TradeEventsService(private val tradeEventsRepository: TradeEventsRepositor
     private val log = LoggerFactory.getLogger(TradeEventsService::class.java)
   }
 
-  fun findAll(): Flux<TradeEvent> {
-    return tradeEventsRepository.findAll()
+  fun streamAll(): Flux<TradeEvent> {
+    return tradeEventsRepository.streamAll()
   }
 
-  fun findByTicker(stockTicker: StockTicker): Flux<TradeEvent> {
-    return tradeEventsRepository.findAll()
+  fun streamByTicker(stockTicker: StockTicker): Flux<TradeEvent> {
+    return tradeEventsRepository.streamAll()
       .filter { event -> event.stockTicker==stockTicker }
   }
 }

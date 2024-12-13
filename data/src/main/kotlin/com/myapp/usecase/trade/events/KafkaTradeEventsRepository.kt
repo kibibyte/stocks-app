@@ -1,4 +1,4 @@
-package com.myapp.usecase.trades.events;
+package com.myapp.usecase.trade.events;
 
 import io.micronaut.configuration.kafka.annotation.KafkaListener
 import io.micronaut.configuration.kafka.annotation.OffsetReset
@@ -24,7 +24,7 @@ class KafkaTradeEventsRepository : TradeEventsRepository {
     ))
   }
 
-  override fun findAll(): Flux<TradeEvent> {
+  override fun streamAll(): Flux<TradeEvent> {
     return sink.asFlux()
   }
 }

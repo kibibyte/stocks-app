@@ -1,4 +1,4 @@
-package com.myapp.usecase.trades;
+package com.myapp.usecase.trade;
 
 import com.myapp.exceptions.InvalidArgumentException
 

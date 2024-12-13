@@ -1,6 +1,6 @@
-package com.myapp.usecase.trades.events;
+package com.myapp.usecase.trade.events;
 
-import com.myapp.usecase.trades.StockTicker
+import com.myapp.usecase.trade.StockTicker
 import io.micronaut.serde.annotation.Serdeable;
 
 @Serdeable

@@ -1,6 +1,6 @@
 package com.myapp.usecase.trades
 
-import com.myapp.usecase.trades.events.TradeEventEntity
+import com.myapp.usecase.trade.events.TradeEventEntity
 import io.micronaut.configuration.kafka.annotation.KafkaClient
 import io.micronaut.configuration.kafka.annotation.Topic
 

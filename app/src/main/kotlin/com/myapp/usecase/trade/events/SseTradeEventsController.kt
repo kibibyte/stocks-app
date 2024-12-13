@@ -1,6 +1,6 @@
-package com.myapp.usecase.trades.events;
+package com.myapp.usecase.trade.events;
 
-import com.myapp.usecase.trades.StockTicker
+import com.myapp.usecase.trade.StockTicker
 import io.micronaut.http.MediaType.TEXT_EVENT_STREAM
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
@@ -12,16 +12,16 @@ import reactor.core.publisher.Flux
 class SseTradeEventsController(private var tradeEventsService: TradeEventsService) {
 
   @Get(value = "/sse/trades", produces = [TEXT_EVENT_STREAM])
-  fun findAll(): Flux<Event<TradeEventData>> {
+  fun streamAll(): Flux<Event<TradeEventData>> {
     return tradeEventsService
-      .findAll()
+      .streamAll()
       .map { toSseEvent(it) }
   }
 
   @Get(value = "/sse/trades/{stockTicker}", produces = [TEXT_EVENT_STREAM])
-  fun findByTicker(@PathVariable stockTicker: StockTicker): Flux<Event<TradeEventData>> {
+  fun streamByTicker(@PathVariable stockTicker: StockTicker): Flux<Event<TradeEventData>> {
     return tradeEventsService
-      .findByTicker(stockTicker)
+      .streamByTicker(stockTicker)
       .map { toSseEvent(it) }
   }
 

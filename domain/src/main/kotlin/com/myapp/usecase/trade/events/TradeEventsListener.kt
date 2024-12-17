@@ -2,6 +2,6 @@ package com.myapp.usecase.trade.events;
 
 import reactor.core.publisher.Flux
 
-interface TradeEventsRepository {
+interface TradeEventsListener {
   fun streamAll(): Flux<TradeEvent>
 }

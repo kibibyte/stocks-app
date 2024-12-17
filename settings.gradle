@@ -1,2 +1,2 @@
 rootProject.name = 'stocks-app'
-include('app', 'domain', 'data')
+include('app', 'domain', 'messaging')

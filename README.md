@@ -5,7 +5,7 @@ Trade events (SSE) Hot Publisher POC
 ## Modules
 
 * app
-* data
+* messaging
 * domain
 
 ## Build

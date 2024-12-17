@@ -9,7 +9,7 @@ plugins {
 
 dependencies {
   implementation(project(":domain"))
-  implementation(project(':data'))
+  implementation(project(':messaging'))
 
   ksp("io.micronaut:micronaut-http-validation")
   ksp("io.micronaut.serde:micronaut-serde-processor")
